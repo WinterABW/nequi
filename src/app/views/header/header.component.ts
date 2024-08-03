@@ -1,6 +1,4 @@
-import { Component, inject } from '@angular/core';
-import { ControllerTapService } from '../../services/common/controller-tap.service';
-
+import { Component} from '@angular/core';
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -9,11 +7,4 @@ import { ControllerTapService } from '../../services/common/controller-tap.servi
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  coins: number = 0;
-
-  private tapSvc = inject(ControllerTapService);
-
-  ngOnInit() {
-    this.tapSvc.coins$.subscribe((coin) => (this.coins = coin));
-  }
 }
