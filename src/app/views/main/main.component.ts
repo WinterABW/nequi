@@ -3,11 +3,12 @@ import { HeaderComponent } from '../header/header.component';
 import { TapComponent } from '../tap/tap.component';
 import { ActionsComponent } from '../actions/actions.component';
 import { BalanceComponent } from '../balance/balance.component';
+import { EnergyBoostComponent } from '../energy-boost/energy-boost.component';
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [HeaderComponent, TapComponent, ActionsComponent, BalanceComponent],
+  imports: [HeaderComponent, TapComponent, ActionsComponent, BalanceComponent,EnergyBoostComponent],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss',
 })
