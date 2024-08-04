@@ -2,10 +2,11 @@ import { Component, HostListener, inject, OnInit } from '@angular/core';
 import { ControllerTapService } from '../../services/common/controller-tap.service';
 import { HammerModule } from '@angular/platform-browser';
 import * as Hammer from 'hammerjs';
+import { NgClass } from '@angular/common';
 @Component({
   selector: 'app-tap',
   standalone: true,
-  imports: [HammerModule],
+  imports: [HammerModule, NgClass],
   templateUrl: './tap.component.html',
   styleUrl: './tap.component.scss',
 })
@@ -13,8 +14,9 @@ export class TapComponent implements OnInit {
   private tapSvc = inject(ControllerTapService);
   multiTouchCount = 0;
   hammer: HammerManager | undefined;
+  isSmallScreen: boolean = false;
 
-/*   @HostListener('touchstart', ['$event'])
+  /*   @HostListener('touchstart', ['$event'])
   onTouchStart(event: TouchEvent) {
     if (event.touches.length > 1) {
       console.log('1 solo toque');
@@ -27,11 +29,21 @@ export class TapComponent implements OnInit {
   } */
 
   ngOnInit() {
-    this.hammer = new Hammer.Manager(document.body);
+    /* this.hammer = new Hammer.Manager(document.body);
     this.hammer.add(new Hammer.Pinch());
     this.hammer.on('pinch', (event) => {
       this.multiTouchCount = event.pointers.length;
       console.log(`Número de dedos: ${this.multiTouchCount}`);
-    });
+    }); */
+    this.checkScreenHeight();
+  }
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.checkScreenHeight();
+  }
+
+  checkScreenHeight() {
+    const viewportHeight = window.innerHeight;
+    this.isSmallScreen = viewportHeight < 640;
   }
 }
