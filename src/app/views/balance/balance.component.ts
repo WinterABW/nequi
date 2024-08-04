@@ -10,7 +10,7 @@ import { ButtonsComponent } from './buttons/buttons.component';
   styleUrl: './balance.component.scss'
 })
 export class BalanceComponent {
-  coins: number = 0;
+  coins: number =0;
 
   private tapSvc = inject(ControllerTapService);
 

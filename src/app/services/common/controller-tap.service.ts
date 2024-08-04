@@ -5,7 +5,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class ControllerTapService {
-  private coins = new BehaviorSubject<number>(0);
+  private coins = new BehaviorSubject<number>(12.345);
   coins$ = this.coins.asObservable();
 
   setCoins(coins: number){
