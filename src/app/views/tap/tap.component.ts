@@ -3,6 +3,7 @@ import { ControllerTapService } from '../../services/common/controller-tap.servi
 import { HammerModule } from '@angular/platform-browser';
 import * as Hammer from 'hammerjs';
 import { NgClass } from '@angular/common';
+
 @Component({
   selector: 'app-tap',
   standalone: true,
@@ -11,6 +12,7 @@ import { NgClass } from '@angular/common';
   styleUrl: './tap.component.scss',
 })
 export class TapComponent implements OnInit {
+  
   private tapSvc = inject(ControllerTapService);
   multiTouchCount = 0;
   hammer: HammerManager | undefined;
