@@ -24,11 +24,11 @@ export class TapComponent implements OnInit {
       console.log('1 solo toque');
     }
   }
-
+*/
   tap() {
     const currentCoins = this.tapSvc.getCoins();
     this.tapSvc.setCoins(currentCoins + 1);
-  } */
+  } 
 
   ngOnInit() {
     /* this.hammer = new Hammer.Manager(document.body);

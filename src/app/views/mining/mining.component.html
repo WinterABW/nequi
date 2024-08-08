@@ -1,5 +1,5 @@
 <section class="min-h-screen flex flex-col justify-center items-center bgcd w-screen px-4">
-    <div class="fixed top-0 w-full">
+    <div class=" w-full">
         <button routerLink="../" class="p-1 inline-flex items-center gap-2">
             <img src="assets/icons/back.png" alt="previus" class="w-8">
             Back
@@ -12,7 +12,7 @@
 
     <app-balance />
     <div class="grid grid-cols-2 gap-4 p-2">
-        @for (i of [1,2,3,4,5,6]; track $index) {
+        @for (i of [1,2,3,4,5,6,7,8,9,0,1,2,3,4]; track $index) {
         <app-product />
         }
     </div>

@@ -6,10 +6,10 @@ import { ControllerTapService } from '../../../services/common/controller-tap.se
   standalone: true,
   imports: [],
   templateUrl: './balance.component.html',
-  styleUrl: './balance.component.scss'
+  styleUrl: './balance.component.scss',
 })
 export class BalanceComponent implements OnInit {
-  coins: number =0;
+  coins!: number;
 
   private tapSvc = inject(ControllerTapService);
 
