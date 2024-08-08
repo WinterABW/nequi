@@ -1,15 +1,14 @@
-import { Component, inject } from '@angular/core';
-import { ControllerTapService } from '../../services/common/controller-tap.service';
-import { ButtonsComponent } from './buttons/buttons.component';
+import { Component, inject, OnInit } from '@angular/core';
+import { ControllerTapService } from '../../../services/common/controller-tap.service';
 
 @Component({
   selector: 'app-balance',
   standalone: true,
-  imports: [ButtonsComponent],
+  imports: [],
   templateUrl: './balance.component.html',
   styleUrl: './balance.component.scss'
 })
-export class BalanceComponent {
+export class BalanceComponent implements OnInit {
   coins: number =0;
 
   private tapSvc = inject(ControllerTapService);
