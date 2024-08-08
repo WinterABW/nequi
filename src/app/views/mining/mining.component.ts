@@ -3,8 +3,14 @@ import { PerHourComponent } from '../../common/components/per-hour/per-hour.comp
 import { LevelComponent } from '../../common/components/level/level.component';
 import { RouterLink } from '@angular/router';
 import { BalanceComponent } from '../../common/components/balance/balance.component';
+import { ProductComponent } from './components/product/product.component';
 
-const components = [PerHourComponent, LevelComponent, BalanceComponent];
+const components = [
+  PerHourComponent,
+  LevelComponent,
+  BalanceComponent,
+  ProductComponent,
+];
 
 @Component({
   selector: 'app-mining',
