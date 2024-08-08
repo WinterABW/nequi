@@ -6,4 +6,9 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./views/main/main.component').then((c) => c.MainComponent),
   },
+  {
+    path: 'mining',
+    loadComponent: () =>
+      import('./views/mining/mining.component').then((c) => c.MiningComponent),
+  },
 ];
