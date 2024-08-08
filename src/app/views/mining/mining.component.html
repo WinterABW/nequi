@@ -1,7 +1,13 @@
 <section class="min-h-screen flex flex-col justify-center items-center bgcd">
-    <div class="fixed top-0 py-2 flex justify-between items-center w-screen px-4 gap-1">
-        <button routerLink="../" >back</button>
-        <app-level />
-        <app-per-hour />
+    <div class="fixed top-0 w-screen">
+        <button routerLink="../" class="p-1 inline-flex items-center gap-2">
+            <img src="assets/icons/back.png" alt="previus" class="w-8">
+            Back
+        </button>
+        <div class="w-full py-2 flex justify-between items-center px-4 gap-1">
+            <app-level />
+            <app-per-hour />
+        </div>
     </div>
+    
 </section>
