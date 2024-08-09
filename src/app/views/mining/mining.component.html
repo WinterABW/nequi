@@ -6,12 +6,12 @@
         </button>
         <div class="w-full py-2 flex justify-between items-center px-4 gap-1">
             <app-level [progress]="70" [gradientColors]="['#702c8e', '#a245d3']" />
-                <app-per-hour />
+            <app-per-hour />
         </div>
     </div>
 
     <app-balance />
-    <div>barra de navegacion</div>
+    <app-nav />
     <div class="grid grid-cols-2 gap-4 p-2">
         @for (i of [1,2,3,4,5,6,7,8,9,0,1,2,3,4]; track $index) {
         <app-product />
