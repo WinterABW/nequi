@@ -10,7 +10,13 @@ import { Component, Input } from '@angular/core';
 })
 export class LevelComponent {
   @Input() progress: number = 0;
-  @Input() gradientColors: string[] = ['#756475', '#4c104e'];
+  @Input() gradientColors: string[] = ['#450447', '#641b66', '#ed57f7'];
   @Input() level: number = 0;
   @Input() userTitle:string = 'Newbie';
+
+  getGradientStyle(): string {
+    return `linear-gradient(90deg, ${this.gradientColors[0]} 0%, ${this.gradientColors[1]} 35%, ${this.gradientColors[2]} 100%)`;
+  }
+  
 }
+

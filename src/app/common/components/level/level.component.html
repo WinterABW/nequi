@@ -1,13 +1,10 @@
 <span>
-    <p class="text-xxs roboto-medium mb-1 ml-1">Nivel {{level}} - {{userTitle}}</p>
-    <div class="w-32 bg-[#4c104e] rounded-full ring-1 ring-[#8b8494ad]">
-      <div 
-        class="text-xs font-medium text-blue-100 text-center p-1 leading-none rounded-full"
-        [ngStyle]="{
+  <p class="text-xxs roboto-medium mb-1 ml-1">Nivel {{level}} - {{userTitle}}</p>
+  <div class="w-32 bg-[#5c1a5f] rounded-full ring-1 ring-[#2a292cd5]">
+    <div class="text-xs font-medium text-blue-100 text-center p-1 leading-none rounded-full ring-1 ring-[#36333aad]" [ngStyle]="{
           'width': progress + '%',
-          'background-image': 'linear-gradient(to right, ' + gradientColors.join(', ') + ')'
+          'background-image': getGradientStyle()
         }">
-      </div>
     </div>
-  </span>
-  
+  </div>
+</span>
