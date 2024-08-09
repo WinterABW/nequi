@@ -11,4 +11,6 @@ import { Component, Input } from '@angular/core';
 export class LevelComponent {
   @Input() progress: number = 0;
   @Input() gradientColors: string[] = ['#756475', '#4c104e'];
+  @Input() level: number = 0;
+  @Input() userTitle:string = 'Newbie';
 }
