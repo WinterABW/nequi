@@ -1,8 +1,8 @@
 import { Component, HostListener, inject, OnInit } from '@angular/core';
-import { ControllerTapService } from '../../services/common/controller-tap.service';
 import { HammerModule } from '@angular/platform-browser';
 import * as Hammer from 'hammerjs';
 import { NgClass } from '@angular/common';
+import { ControllerTapService } from '../../../services/common/controller-tap.service';
 
 @Component({
   selector: 'app-tap',

@@ -1,16 +1,18 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from '../header/header.component';
-import { TapComponent } from '../tap/tap.component';
-import { ActionsComponent } from '../actions/actions.component';
-import { BalanceComponentView } from '../balance/balance-view.component';
-import { EnergyBoostComponent } from '../energy-boost/energy-boost.component';
+import { HeaderComponent } from './header/header.component';
+import { TapComponent } from './tap/tap.component';
+import { ActionsComponent } from './actions/actions.component';
+import { EnergyBoostComponent } from './energy-boost/energy-boost.component';
+import { ButtonsComponent } from './buttons/buttons.component';
+import { BalanceComponent } from '../../common/components/balance/balance.component';
 
 const components = [
   HeaderComponent,
+  ButtonsComponent,
+  BalanceComponent,
   TapComponent,
-  ActionsComponent,
-  BalanceComponentView,
   EnergyBoostComponent,
+  ActionsComponent,
 ];
 
 @Component({

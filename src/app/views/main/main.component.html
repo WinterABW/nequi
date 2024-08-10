@@ -1,7 +1,10 @@
-<section class="min-h-screen w-screen flex flex-col justify-center items-center bgcd">
-  <app-header class="fixed top-0 py-2" />
-  <app-balance-view class="bgc mt-4" />
-  <app-tap class="bgc w-screen flex justify-center items-center" />
-  <app-energy-boost class="bgc"/>
-  <app-actions class="flex flex-col gap-5 items-center bgc" />
+<section class="w-screen bg-black">
+  <app-header />
+  <div class="bg-[#4c104e] rounded-tl-3xl rounded-tr-3xl bgcd border-t-4 border-[#a005a5] bs-out">
+    <app-buttons />
+    <app-balance />
+    <app-tap />
+    <app-energy-boost />
+  </div>
+  <app-actions />
 </section>
