@@ -8,6 +8,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { ToastComponent } from './components/toast/toast.component';
 import { ActionsComponent } from '../../common/components/actions/actions.component';
 import { NgClass } from '@angular/common';
+import { ModalComponent } from './components/modal/modal.component';
 
 const components = [
   PerHourComponent,
@@ -17,6 +18,7 @@ const components = [
   NavComponent,
   ToastComponent,
   ActionsComponent,
+  ModalComponent
 ];
 
 @Component({
