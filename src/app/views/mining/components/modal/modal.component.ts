@@ -12,15 +12,17 @@ import {
   standalone: true,
   imports: [NgClass],
   templateUrl: './modal.component.html',
-  styleUrl: './modal.component.scss',
+  styleUrls: ['./modal.component.scss'], // Corrigió 'styleUrl' a 'styleUrls'
 })
 export class ModalComponent implements OnInit {
   isSmallScreen: boolean = false;
   @Output() modalClosed = new EventEmitter<void>();
+  modalAnimationClass: string = 'fadeInUp'; // Inicialmente se establece la animación de entrada
 
   ngOnInit() {
     this.checkScreenHeight();
   }
+
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     this.checkScreenHeight();
@@ -32,6 +34,11 @@ export class ModalComponent implements OnInit {
   }
 
   closeModal() {
-    this.modalClosed.emit();
+    this.modalAnimationClass = 'fadeOutDown'; // Cambia la animación a la de salida
+
+    // Espera a que la animación termine antes de emitir el evento para cerrar el modal
+    setTimeout(() => {
+      this.modalClosed.emit();
+    }, 1000); // Duración de la animación en milisegundos
   }
 }
