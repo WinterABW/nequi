@@ -18,10 +18,19 @@
 
         <div class="grid grid-cols-2 gap-4 mt-2 p-2">
             @for (i of [1,2,3,4]; track $index) {
-            <app-product />
+            <app-product (modalOpened)="toggleModal()" />
             }
         </div>
     </div>
 
     <app-actions />
+    @if(isModalOpen){
+    <div class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-end">
+        <div class="w-full bg-white h-3/4 rounded-t-lg p-4">
+            <h2 class="text-xl font-semibold">Detalle de la compra</h2>
+            <!-- Contenido de la ventana modal -->
+            <p>Aquí va el contenido de la ventana modal...</p>
+        </div>
+    </div>
+    }
 </section>

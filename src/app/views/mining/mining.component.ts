@@ -7,6 +7,7 @@ import { ProductComponent } from './components/product/product.component';
 import { NavComponent } from './components/nav/nav.component';
 import { ToastComponent } from './components/toast/toast.component';
 import { ActionsComponent } from '../../common/components/actions/actions.component';
+import { NgClass } from '@angular/common';
 
 const components = [
   PerHourComponent,
@@ -15,14 +16,20 @@ const components = [
   ProductComponent,
   NavComponent,
   ToastComponent,
-  ActionsComponent
+  ActionsComponent,
 ];
 
 @Component({
   selector: 'app-mining',
   standalone: true,
-  imports: [RouterLink, components],
+  imports: [RouterLink, NgClass, components],
   templateUrl: './mining.component.html',
   styleUrl: './mining.component.scss',
 })
-export class MiningComponent {}
+export class MiningComponent {
+  isModalOpen = false;
+
+  toggleModal() {
+    this.isModalOpen = !this.isModalOpen;
+  }
+}
