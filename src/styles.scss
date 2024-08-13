@@ -109,7 +109,7 @@ body {
 //animations
 
 ::view-transition-old(root){
-  animation: exit 1s ease-in-out 0s 1 normal forwards;
+  animation: exit 500ms ease-in-out 0s 1 normal forwards;
 }
 
 ::view-transition-new(root){
@@ -118,7 +118,7 @@ body {
 
 @keyframes entry {
 	0% {
-		opacity: .5;
+		opacity: .7;
 		transform: translateX(50px);
 	}
 
@@ -135,7 +135,7 @@ body {
 	}
 
 	100% {
-		opacity: 0;
+		opacity: .7;
 		transform: translateX(-50px);
 	}
 }
