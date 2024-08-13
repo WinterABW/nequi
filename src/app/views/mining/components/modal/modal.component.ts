@@ -23,4 +23,8 @@ export class ModalComponent implements OnInit {
     const viewportHeight = window.innerHeight;
     this.isSmallScreen = viewportHeight < 640;
   }
+
+  closeModal() {
+    // close modal
+  }
 }
