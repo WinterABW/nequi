@@ -26,6 +26,6 @@
     <app-actions />
 
     @if(isModalOpen){
-    <app-modal />
+    <app-modal (modalClosed)="toggleModal()" />
     }
 </section>

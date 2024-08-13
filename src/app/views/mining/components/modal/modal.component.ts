@@ -1,5 +1,11 @@
 import { NgClass } from '@angular/common';
-import { Component, HostListener, OnInit } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  HostListener,
+  OnInit,
+  Output,
+} from '@angular/core';
 
 @Component({
   selector: 'app-modal',
@@ -10,6 +16,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 })
 export class ModalComponent implements OnInit {
   isSmallScreen: boolean = false;
+  @Output() modalClosed = new EventEmitter<void>();
 
   ngOnInit() {
     this.checkScreenHeight();
@@ -25,6 +32,6 @@ export class ModalComponent implements OnInit {
   }
 
   closeModal() {
-    // close modal
+    this.modalClosed.emit();
   }
 }
