@@ -4,11 +4,14 @@
 
         <!-- Imagen en el borde superior -->
         <img src="https://via.placeholder.com/400x400" alt="Imagen"
-            class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 rounded-full border-[16px] border-white border-opacity-20">
+            class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full border-[16px] border-white border-opacity-20" 
+            [ngClass]="isSmallScreen ? 'w-40' : 'w-60'">
 
         <!-- Botón de cierre -->
         <button class="w-full flex justify-end absolute top-0 p-4">
             <img src="assets/close.svg" alt="close" class="w-10">
         </button>
+
+        <div></div>
     </div>
 </div>

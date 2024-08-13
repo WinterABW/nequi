@@ -1,12 +1,26 @@
-import { Component } from '@angular/core';
+import { NgClass } from '@angular/common';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-modal',
   standalone: true,
-  imports: [],
+  imports: [NgClass],
   templateUrl: './modal.component.html',
-  styleUrl: './modal.component.scss'
+  styleUrl: './modal.component.scss',
 })
-export class ModalComponent {
+export class ModalComponent implements OnInit {
+  isSmallScreen: boolean = false;
 
+  ngOnInit() {
+    this.checkScreenHeight();
+  }
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.checkScreenHeight();
+  }
+
+  checkScreenHeight() {
+    const viewportHeight = window.innerHeight;
+    this.isSmallScreen = viewportHeight < 640;
+  }
 }
