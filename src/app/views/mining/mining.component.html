@@ -1,13 +1,7 @@
 <section class="min-h-screen flex flex-col justify-center items-center w-full overflow-hidden bg-black">
-    <div class="w-full flex flex-col gap-0 justify-center">
-        <button routerLink="../" class="p-1 inline-flex items-center gap-2">
-            <img src="assets/icons/back.png" alt="previus" class="w-8">
-            Back
-        </button>
-        <div class="w-full -mt-1 mb-5 flex justify-between items-center px-4 gap-1">
-            <app-level [progress]="100" />
-            <app-per-hour />
-        </div>
+    <div class="w-full my-4 flex justify-between items-center px-4 gap-1">
+        <app-level [progress]="100" />
+        <app-per-hour />
     </div>
 
     <div
