@@ -6,7 +6,7 @@ import { BalanceComponent } from '../../common/components/balance/balance.compon
 import { ProductComponent } from './components/product/product.component';
 import { NavComponent } from './components/nav/nav.component';
 import { ToastComponent } from './components/toast/toast.component';
-import { ActionsComponent } from '../main/actions/actions.component';
+import { ActionsComponent } from '../../common/components/actions/actions.component';
 
 const components = [
   PerHourComponent,
