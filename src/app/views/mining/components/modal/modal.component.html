@@ -1,6 +1,14 @@
 <div class="fixed inset-0 bg-opacity-50 flex items-end">
     <div
-        class="w-full flex flex-col justify-between items-center h-3/4 rounded-tl-3xl rounded-tr-3xl border-t-4 border-[#a005a5] bs-out bg-[#4c104e] p-4">
-        <button class="w-full flex justify-end"><img src="assets/close.svg" alt="close" class="w-10"></button>
+        class="relative w-full flex flex-col justify-between items-center h-3/4 rounded-tl-3xl rounded-tr-3xl border-t-4 border-[#a005a5] bs-out bg-[#4c104e] p-4">
+
+        <!-- Imagen en el borde superior -->
+        <img src="https://via.placeholder.com/400x400" alt="Imagen"
+            class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 rounded-full border-[16px] border-white border-opacity-20">
+
+        <!-- Botón de cierre -->
+        <button class="w-full flex justify-end absolute top-0 p-4">
+            <img src="assets/close.svg" alt="close" class="w-10">
+        </button>
     </div>
 </div>
