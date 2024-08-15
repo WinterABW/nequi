@@ -1,5 +1,5 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { ControllerTapService } from '../../../services/common/controller-tap.service';
+import { ControllerTapService } from '../../services/tap/controller-tap.service';
 
 @Component({
   selector: 'app-balance',
