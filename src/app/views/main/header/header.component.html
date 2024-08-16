@@ -1,0 +1,17 @@
+<section class="w-full flex flex-col justify-center items-center mb-3">
+  <div class="w-screen flex flex-row justify-between items-center py-2 px-2">
+    <article class="flex items-center gap-2">
+      <img src="assets/icons/avatar.svg" alt="user">
+      <p>User0001</p>
+    </article>
+
+    <button>
+      <img src="assets/icons/setting.png" alt="settings" class="w-6">
+    </button>
+  </div>
+
+  <div class="flex justify-between items-center w-screen px-4">
+    <app-level [progress]="90" />
+    <app-per-hour />
+  </div>
+</section>
